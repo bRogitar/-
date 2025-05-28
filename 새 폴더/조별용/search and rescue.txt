@@ -1,0 +1,887 @@
+(19) United States
+(12) Patent Application Publication (10) Pub. No.: US 2017/0088261 A1
+US 20170O88261A1
+Sequeira et al. (43) Pub. Date: Mar. 30, 2017
+(54) SEARCH AND RESCUE UAV SYSTEMAND (52) U.S. Cl.
+METHOD CPC ......... B64C39/024 (2013.01); G05D I/0044
+(2013.01); G05D I/0038 (2013.01); G0IS
+(71) Applicant. Tyco Fire & Security GmbH, 13/0209 (2013.01); B64C 220.1/127 (2013.01);
+Neuhausen am Rheinfall (CH) B64C 220 1/126 (2013.01); B64C 220 1/146
+(72) Inventors: Melwyn F. Sequeira, Plantation, FL (2013.01)
+(US); Mohammad Mohiuddin,
+Boynton Beach, FL (US) (57) ABSTRACT
+(21) Appl. No.: 14/869,531
+(22) Filed: Sep. 29, 2015 An unmanned aerial vehicle (UAV) having at least one
+O O sensor for detecting the presence of a Survivor in a search
+Publication Classification and rescue area. The at least one sensor is preferably an
+(51) Int. Cl. ultra-wide band (UWB) transceiver sensor. The UAV
+B64C39/02 (2006.01) includes a UAV data link transceiver for wirelessly commu
+GOIS I.3/02 (2006.01) nicating information concerning the Survivor to a command
+G05D I/O (2006.01) Center.
+
+Patent Application Publication US 2017/0O88261 A1
+
+
+
+
+
+
+Patent Application Publication Mar. 30, 2017. Sheet 2 of 5 US 2017/0O88261 A1
+
+5
+Patent Application Publication Mar. 30, 2017. Sheet 3 of 5 US 2017/0O88261 A1
+Visual Light Camera
+22
+Video Analytics
+System
+29
+Proximity
+SensOr
+27
+Inter-UAV Oata Link
+ransceiver
+24
+UAV Data Link TranSceiver
+25
+UAW Controller
+31.
+GPS Receiver TranSceiver
+33 Sensor
+26
+LOCOmotion
+System
+39
+Gas Sensor
+Medical Supply 38
+Compartment
+36
+Omnidir.
+MC
+23B
+UAV LPS
+Module
+35
+FIG. 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Patent Application Publication Mar. 30, 2017. Sheet 4 of 5 US 2017/0O88261 A1
+1s-os------ First UAV Status 74
+Reference Location 60 -o-
+-ar First UAV location 7OA
+First UAV Travel Path 64 - D
+Mobile --- Survivor Vita Signs Telemetry Data 62
+Command
+Center -- visible image Data 66 First UAV
+16
+1es Audio Data 67
+---------------------------------- Survivor Location 58
+--- R image data 78
+-as UWB data 80
+Release Medical Supplies Command 76 -->
+UAV-Command Data Link 42
+Second UAV
+12B
+12A
+Survivor 3D
+Vita location Hazards
+in Path Signs Map
+62 36 88
+First Responder
+82
+FIG 3
+
+Patent Application Publication
+100
+102
+104
+106
+108
+Command centerpre-loads a
+reference location (e.g., location
+of destroyed building) into UAV
+PS module of each UAV to be
+used for determining survivor
+location
+Command center coordinates
+travel paths of each UAV and
+uploads travel paths to each UAV
+If UAV is damaged or
+becomes trapped, UAV
+requests deployment of a
+substitute UAV
+First UAV detects presence of a
+Survivor and determines survivor
+location
+Provide wireless communication
+between first UAV and a second
+UAV for confirming and
+refining detection
+Mar. 30, 2017 Sheet 5 of 5
+110
+112
+114
+16
+FIG. 4
+US 2017/0088261 A1
+First UAV measures survivor
+Vital signs telemetry data (e.g.,
+heart rate and respiration rate) for
+detected survivor
+First UAV wirelessly
+communicates Survivor vital signs telemetry data and survivor
+location to command center
+Command center instructs
+UAV(s) to provide emergency
+medical Supplies to the detected
+survivor based on survivor vital
+signs telemetry data
+Command center determines
+ingress/egress path to the
+survivor and identifies
+hazardous conditions in the
+determined path
+
+
+
+
+
+
+US 2017/0O88261 A1
+SEARCH AND RESCUE UAV SYSTEMAND
+METHOD
+BACKGROUND OF THE INVENTION
+0001 Fires, storms, earthquakes, terrorist attacks, and the
+like can create disaster situations that require search and
+rescue operations and even recovery operations. For
+example, Survivors can become trapped and buried within
+debris and rubble as a result of these disaster situations.
+Additionally, search and rescue operations are also required
+when individuals become lost or are otherwise unable to
+return. First responders organize search and rescue opera
+tions to locate the trapped or lost survivors. Often, first
+responders must travel through harmful conditions to find
+and then help the survivors.
+0002 Unmanned aerial vehicles (UAVs) or drones rep resent an evolving technology that is becoming more ubiq
+uitous. Currently, UAVs are used for such disparate appli cations as toys and weapons platforms. They are even being
+proposed for search and rescue applications. For example,
+thermal imaging kits are available to augment the imaging capabilities of standard consumer/hobbyist grade UAVs for
+search and rescue.
+SUMMARY OF THE INVENTION
+0003. The present invention is directed toward solutions
+to accelerate search efforts while reducing the risks to the
+first responders and survivors. Specifically, the present
+invention system includes UAVs, or other type of unmanned
+vehicles, having sensors for detecting the presence of Sur
+vivors in a search and rescue area. For example, these sensors allow UAVs to locate survivors buried in debris of
+an infrastructure damaged by earthquakes, storms, fires, etc.
+The UAVs of the present invention can also include UAV
+data link transceivers for wirelessly communicating infor
+mation concerning the Survivors to command centers. For
+example, these UAV data link transceivers allow UAVs to
+wirelessly communicate Survivor vital signs telemetry data
+to mobile command centers (e.g., fire trucks). In general, the
+present system provides a solution that speeds up search and
+rescue operations to Survivors while reducing or mitigating
+danger to first responders and Survivors.
+0004. In general, according to one aspect, the invention
+features an unmanned aerial vehicle (UAV), including: an
+ultra-wide band (UWB) transceiver sensor for detecting a
+presence of a Survivor in a search and rescue area and a UAV
+data link transceiver for wirelessly communicating informa
+tion concerning the Survivor to a command center.
+0005. The information concerning the survivor can
+include Survivor Vital signs telemetry data. For example, the
+survivor vital signs telemetry data include the heart and/or
+respiration rate of the survivor. In embodiments, the UAV
+data link transceiver is configured to wirelessly communi
+cate the information concerning the survivor via a UAV
+command data link to the command center.
+0006 Preferably, the UAV further includes an inter-UAV
+data link transceiver for wirelessly communicating informa
+tion concerning the survivor to another UAV.
+0007 Preferably, the UAV further includes a medical
+Supply compartment for holding emergency medical Sup
+plies. The medical Supply compartment is configured to
+release medical supplies to the survivor based on the
+detected presence of the survivor.
+Mar. 30, 2017
+0008. The UAV can also include a UAV local positioning system module for determining the position of the UAV
+within the area. In examples, the module can receive or
+generate local positioning signals from multiple local posi
+tioning system portable antennas Surrounding the search and
+rescue area for determining a position of the UAV in the
+search and rescue area.
+0009. The UAV can further include a proximity sensor for
+detecting the presence of objects in the search and rescue
+area. A gas sensor can also be included for detecting the
+presence of different kinds of gases, along with a visible
+light camera for detecting video.
+0010. In general, according to another aspect, a search
+and rescue system includes a command center and an
+unmanned aerial vehicle (UAV). The UAV has at least one
+sensor for detecting the presence of a Survivor in the search
+and rescue area, and a UAV data link transceiver for wire
+lessly communicating information concerning the Survivor
+to the command center.
+0011. The at least one sensor is preferably an ultra-wide
+band (UWB) transceiver sensor.
+0012 Preferably, the command center includes a 3-di
+mensional mapping system for creating a 3-dimensional
+contour map of the search and rescue area.
+0013 Preferably, the system further includes a wide-area
+modem for communicating over a cellular network.
+0014. In general, according to another aspect, the search
+and rescue method includes deploying an unmanned aerial
+vehicle (UAV) having an ultra-wide band (UWB) trans
+ceiver sensor in a search and rescue area. The UWB trans
+ceiver sensor detects the presence of a Survivor in the search
+and rescue area and the UAV wirelessly communicates
+information concerning the Survivor to a command center.
+(0015 Preferably, the method further includes determin
+ing an ingress/egress path to the Survivor. The command
+center can identify a hazardous condition in the determined ingress/egress path.
+(0016 Preferably, the method further includes the UAV
+requesting deployment of a substitute UAV if the UAV is
+damaged or trapped.
+0017. The above and other features of the invention,
+including various novel details of construction and combi
+nations of parts, and other advantages, will now be more
+particularly described with reference to the accompanying
+drawings and pointed out in the claims. It will be understood
+that the particular method and device embodying the inven
+tion are shown by way of illustration and not as a limitation
+of the invention. The principles and features of this inven
+tion may be employed in various and numerous embodi
+ments without departing from the scope of the invention.
+BRIEF DESCRIPTION OF THE DRAWINGS
+0018. In the accompanying drawings, reference charac
+ters refer to the same parts throughout the different views.
+The drawings are not necessarily to Scale; emphasis has
+instead been placed upon illustrating the principles of the
+invention. Of the drawings:
+0019 FIG. 1A is a schematic diagram of a search and
+rescue system according to the present invention;
+0020 FIG. 1B is a schematic diagram showing further
+aspects of the search and rescue system;
+0021 FIG. 2 is a block diagram illustrating the compo
+nents of a UAV according to the present invention;
+US 2017/0O88261 A1
+0022 FIG. 3 is a schematic diagram illustrating the types
+of information exchanged between the command center and
+the first UAV as well as communications between the first
+UAV and the second UAV; and
+0023 FIG. 4 is a flow chart illustrating the operation of
+the system.
+DETAILED DESCRIPTION OF THE
+PREFERRED EMBODIMENTS
+0024. The invention now will be described more fully hereinafter with reference to the accompanying drawings, in
+which illustrative embodiments of the invention are shown.
+This invention may, however, be embodied in many different
+forms and should not be construed as limited to the embodi
+ments set forth herein; rather, these embodiments are pro vided so that this disclosure will be thorough and complete, and will fully convey the scope of the invention to those
+skilled in the art.
+0025. As used herein, the term “and/or includes any and
+all combinations of one or more of the associated listed
+items. Further, singular forms and the articles “a”, “an and
+“the are intended to include the plural forms as well, unless
+expressly stated otherwise. It will be further understood that
+the terms: includes, comprises, including and/or comprising, when used in this specification, specify the presence of
+stated features, integers, steps, operations, elements, and/or
+components, but do not preclude the presence or addition of
+one or more other features, integers, steps, operations,
+elements, components, and/or groups thereof. Further, it will
+be understood that when an element, including a component
+or Subsystem, is referred to and/or shown as being connected
+or coupled to another element, it can be directly connected
+or coupled to the other element or intervening elements may be present.
+0026 FIG. 1A depicts a search and rescue system 10,
+according to one embodiment of the present invention.
+0027. The search and rescue system 10 includes
+unmanned aerial vehicles (UAVs) 12. As illustrated, the
+UAVs 12 are deployed to search for survivors 40 in a search
+and rescue area 14. In this example, a first UAV 12A and a
+second UAV 12B are deployed. Other examples can include
+deployment of one UAV 12, three UAVs 12, four UAVs 12,
+or any other number of UAVs 12 as appreciated by one of
+skill in the art.
+0028. The UAVs 12 have sensors such as ultra-wide band
+(UWB) transceiver sensors 26 for detecting survivors 40 in
+the search and rescue area 14. In one example, the UWB
+transceiver sensors 26 include radar technology Such as
+UWB S-band multiple-input multiple-output (MIMO)
+phased array radar systems. In this example, the UWB
+transceiver sensors 26 include UWB impulse transmitters
+that transmit UWB radio signals 30 in multiple directions.
+The UWB radio signals 30 reflect off of objects and survi
+vors 40 as reflected UWB radio signals 30R. The UWB
+transceiver sensors 26 include receivers for detecting and
+accepting the reflected UWB radio signals 30R. The UWB
+transceiver sensors 26 detect Survivor vital signs telemetry
+data as movement or phase shifts in the reflected UWB radio
+signals 30R. For example, this detected movement of a
+Survivor 40 can include walking and displacement of chest
+due to respiration rate or heart rate. The respiration rate or
+heart rate displacements can cause changes in frequency
+values, phase values, amplitude values, and arrival time
+values of the reflected UWB radio signals 30R compared to
+Mar. 30, 2017
+the transmitted UWB radio signals 30. The UWB transceiver
+sensors 26 use these value changes to detect a presence of
+survivors 40 as well as the vital signs telemetry data (heart
+rates and/or respiration rates) of survivors 40. Further, the
+UWB transceiver sensors 26 can determine a distance
+between the UAVs 12 and survivors 40 based on the time
+difference between transmission of the UWB radio signals 30 and receipt of the reflected UWB radio signals 30R from
+survivors 40. This distance can be used in determining the
+survivor's location.
+(0029. UWB transceiver sensors 26 are capable of detect
+ing Survivors through debris 41 (e.g., a concrete wall). The
+UWB transceiver sensors 26 can generate UWB radio
+signals 30 in a large spectral range at low frequencies which
+enables the UWB radio signals 30 to penetrate through
+concrete walls or other debris 41. For example, the UWB
+transceiver sensors 26 can detect survivors 40 through a 10
+cm thick concrete wall by using high-speed synthetic
+aperture radar (SAR) imaging architecture. The UAVs 12
+can use this technology to search for Survivors 40 through
+debris 41.
+0030 UAVs 12 include UAV local positioning system
+(LPS) modules 35 that provide self positioning. UAVs 12 use the UAV LPS modules 35 to determine their UAV
+locations in the search and rescue area 14. In one example, the UAV LPS modules 35 receive local position LP signals
+37 from multiple LPS portable antennas 15A-15C surround
+ing the search and rescue area 14. For example, the UAV
+LPS module 35 determines a UAV location for the UAV 12
+by triangulating the UAV location based on received LP
+signals 37. In particular, the UAV LPS module 35 calculates
+the time difference between transmission and receipt of an
+LP signal 37. This time difference is a relative time delay for
+the particular LPS portable antenna (e.g., first LPS portable
+antenna 15A). The UAV LPS module 35 uses this time
+difference to determine the distance between the UAV 12
+and the first LPS portable antenna 15A. This distance
+determination is repeated for the second and third LPS
+portable antennas 15B-15C based on their respective time
+delays. In this example, the UAV LPS module 35 triangu
+lates its UAV location based on these determined distances
+between the UAV 12 and each of the LPS portable antennas
+15A-15C. Alternatively, the UAV LPS module 35 can deter
+mine the UAV location by transmitting signals which are
+triangulated from the antennas. The UAV 12 can determine
+the survivor location based on the UAV location and dis
+tance and angle between the UAV 12 and survivor 40.
+0031. The UAVs 12 wirelessly communicate information
+concerning the survivor 40 to other UAVs 12 via inter-UAV
+data links 44. Each UAV 12 includes an inter-UAV data link
+transceiver 24 that enables communication via the inter
+UAV data links 44. The inter-UAV data links 44 can be IEEE
+802.11. The UAVs 12 use the inter-UAV data link transceiv
+ers 24 to continuously communicate with one another during search and rescue operations. For example, this inter-UAV
+communication eliminates potential overlap searching by a
+second UAV 12B as well as provides a way for other UAVs
+12 to confirm accuracy of survivor detection by a first UAV
+12A.
+0032. The UAVs 12 wirelessly communicate information
+concerning the Survivor 40 (e.g., Survivor location) to a
+mobile command center 16 via a UAV-command data link
+42. Each UAV 12 includes a UAV data link transceiver 25
+that enables communication with the mobile command
+US 2017/0O88261 A1
+center 16. The UAV-command data link 42 can be a sub
+gigahertz, data link Such as a radio frequency (RF) Sub
+gigahertz, data link, Z-wave data link, Zigbee data link, or
+other sub-gigahertz, data link. The mobile command center
+16 monitors and controls the UAVs 12 by receiving and
+sending data via the UAV-command data link 42.
+0033. In one example, the mobile command center 16 is
+located on a first responder vehicle 50 (e.g., onsite fire truck)
+and communicates remotely from this location. The mobile
+command center can be located at other remote locations as
+appreciated by one of skill in the art.
+0034. In the illustrated example, the mobile command
+center 16 includes a number of components used in moni
+toring and controlling the UAVs 12. The mobile command
+center 16 has a mobile command center controller 49 for
+directing and monitoring these components.
+0035. The mobile command center 16 has a command
+data link transceiver 58. The command data link transceiver
+58 provides an access point for receiving and sending
+information and data to and from the UAVs 12.
+0036. The mobile command center 16 has a configurator computer workstation 18. The configurator computer work
+station 18 includes a user interface for inputting commands
+to direct the mobile command center 16 and/or UAVs 12.
+0037. The mobile command center 16 has a mobile
+command center control panel 20. The mobile command
+center panel 20 can be used as an additional or alternative
+user interface for directing the mobile command center 16
+and/or UAVs 12. In one example, the mobile command
+center panel 20 is in wireless communication with a campus alarm system via the campus network 54. The mobile
+command center panel 20 can receive alarm information for
+the different buildings 52A, 52B in the campus 52 from this
+campus alarm system (i.e., monitor campus alarm system).
+Further, the mobile command center panel 20 can be used to
+control alarm devices on the campus alarm system.
+0038. The system 10 can determine the UAV location
+using indirect remote positioning technology. As described
+above, the UAV LPS module 35 of the second UAV 12B
+receives LP signals 37 from portable antennas 15C-15E. The
+UAV LPS module 35 of the Second UAV 12B can determine
+the signal distance for each portable antenna 15C, 15D, 15E
+as described above based on time delays. Then, the UAV
+LPS module 35 sends these signal distances as positioning
+signals 43 to the LPS command center module 34 of the
+mobile command center 16. Alternatively, the UAV LPS
+module 35 forwards the measured time delays for each
+portable antenna 15C, 15D, 15E as positioning signals 43.
+The LPS command center module 34 positions the second
+UAV location based on the received positioning signals 43
+(signal distances or measure time delays). In particular, the
+LPS command center module 34 triangulates the UAV
+position of the second UAV 12B in the search and rescue
+area 14 based on the signal distances for the portable
+antennas 15C-15E. Alternatively, the LPS command center
+module 34 can determine the UAV location by trilateration or multilateration.
+0039. In another example, the UAV location can be
+determined using remote positioning technology. In this
+example, the UAV LPS module 35 is a transmitter that sends
+LP signals 37. The portable antennas 15A-15C are receivers
+for accepting the LP signals 37. Each receiver determines its
+distance from the UAV 12 based on the time delay for the LP
+signal 37 received as described above. The multiple receiv
+Mar. 30, 2017
+ers send these determined signal distances to a central site
+Such as the mobile command center 16 for processing. The
+mobile command center 16 triangulates, trilaterates, or mul
+tilaterates the UAV position based on these determined
+signal distances.
+0040. In another example, the UAVs can be remotely
+controlled by a user using feedback control. In this example, the UAV 12 positions itself based on trajectory tracking. In
+particular, the UAV 12 is configured to track the trajectory
+movement of a feedback controller and follow this move
+ment in real-time. Thus, this type of local positioning technology relies on a feedback loop to position the UAV 12
+continuously.
+0041. Other local positioning technologies such as indi
+rect self-positioning can be used as appreciated by one of
+skill in the art.
+0042. The mobile command center 16 includes a global positioning system (GPS) receiver 33. The GPS receiver 33
+can calculate the mobile command center location (e.g.,
+GPS coordinates) by receiving GPS information from GPS
+satellites. In particular, the GPS receiver 33 uses the GPS
+information to determine its distance to each satellite based
+on time delay between transmission and receipt of the GPS
+information. The GPS receiver uses these distances to
+deduce its own location by using trilateration.
+0043. The mobile command center 16 includes a 3-di
+mensional site mapping system 53 for generating a map of
+the search and rescue area 14. The 3-dimensional site
+mapping system 53 receives the mobile command center
+location from the GPS receiver 33 and/or the UAV location
+from the LPS command center module 34. The 3-dimen
+sional site mapping system 53 generates a 3-dimensional
+contour map of the region relative to the mobile command
+center location. The 3-dimensional site mapping system 53
+can generate a 3-dimensional contour map of the region
+relative to the UAV location. Also, the 3-dimensional site
+mapping system 53 can generate a 3-dimensional contour
+map that marks the UAV location relative to the mobile
+command center location as well as the Survivor location.
+The 3-dimensional site mapping system 53 can generate an
+ingress/egress path from the mobile command center 16 to
+the survivor.
+0044. The mobile command center 16 communicates
+with building controllers 17A, 17B via a system manager 48
+in embodiments. The mobile command center 16 uses a
+wide area modem 59 to communicate information remotely
+to the system manager 48 via a wide area data link 46 (e.g.,
+over a cellular network such as 4G LTE). The system
+manager 48 is a router and server combination. The building
+controllers 17A, 17B access information on the system
+manager 48 via campus routers 56A, 56B (i.e., Internet
+connection). For example, the campus routers 56A, 56B
+connect to the Internet via a campus network 54.
+0045. The building controller 17 may be located within a
+building 52A, 52B at a campus 52. In the illustrated
+example, a first building controller 17A is in building one
+52A and a second building controller 17B is in building two
+52B. The building controllers 17A, 17B access the campus
+network 54 via respective campus routers 56A, 56B.
+0046 FIG. 1B depicts the search and rescue system 10
+showing further aspects of the present invention. As
+described above, the UAVs 12 communicate with building
+controllers 17 via UAV-command data links 42 (i.e., using
+UAV data link transceivers 25).
+US 2017/0O88261 A1
+0047. In the illustrated embodiment, the search and res
+cue system 10 include a remote control station 92. The
+remote control station 92 is configured to monitor and
+control the UAVs 12 remotely. For example, the remote
+control station 92 runs interactive mobile applications and
+services on a display that monitors and controls the UAVs
+12. The interactive mobile applications and services provide
+real-time or near real-time UAV status data, UAV location,
+Survivor location, etc. Also, the interactive mobile applica tions and services can provide command options for con
+trolling the UAVs 12. The remote control station 92 can
+include a single display Such as a touch-screen display or
+non-touch screen display for displaying information.
+0.048. The remote control station 92 monitors and con
+trols the UAVs 12 (first UAV 12A and second UAV 12B) via
+the system manager 48 and building controller 17. In par
+ticular, the remote control station 92 communicates with the
+system manager 48 via a wide area data link 46 (e.g., 4G
+LTE 46A or Wi-Fi 46B). Then, the system manager 48
+converts this communication to compressed data and sends
+the compressed communication to the building controller 17
+via wire or wirelessly. The building controller 17 relays the
+compressed communication to the UAVs 12 (e.g., first UAV
+12A or second UAV 12B). Also, the building controller 17
+relays information from the UAVs 12 to the system manager 48. The system manager 48 forwards this UAV communi
+cation to the remote control station 92 via 4G LTE 46A or
+Wi-Fi 46B links, in some implementations.
+0049. As illustrated, the same building controller 17
+receives building alarm information from fire alarm sensors
+95. Fire alarm sensors 95 include fire pull alarm sensor 96A,
+smoke detector sensor 96B, heat detector sensor 96C, and/or
+suppression sensor 96D. The building controller 17 can
+receive the building alarm information directly from the fire
+alarm sensors 95 via a sensor-command data link 93. The
+sensor-command data link 93 can be same type of link as the
+UAV-command data link (e.g., Sub-gigahertz, data link).
+Alternatively, the building controller 17 can receive the
+building alarm information from a fire alarm panel 94. The
+fire alarm sensors 95 communicate building alarm informa
+tion to the fire alarm panel 94 via a sensor network 90. Then,
+the fire alarm panel 94 forwards the building alarm infor
+mation as “events' to the building controllers 17 via wire or
+wirelessly.
+0050 FIG. 2 shows a detailed view of various compo
+nents in the UAV 12.
+0051. The UAV 12 includes a UAV controller 31. The
+UAV controller 31 monitors and controls UAV components which include various sensing mechanisms. For example,
+the UAV controller 31 directs sensing mechanisms that are
+used to detect survivors 40, determine location information,
+navigate through the search and rescue area 14, identify
+hazardous conditions in the search and rescue area 14, etc.
+0052. The UAV 12 includes a locomotion system 39 for
+moving the UAV. Typically, the locomotion system 39
+includes at least one motor that powers jets, ducted systems, propellers or multiple rotor arms (e.g., multicopter UAVs
+Such as bicopters, tricopters, quadcopters, pentacopters,
+hexacopters, octocopters, Y4s, Y6s, Vtails, or Xes). For this
+type of UAV 12, the locomotion system 39 controls move
+ment by varying speed, pitch, and/or orientation of each
+propeller causing variation in thrust and direction of flight.
+In another example, the locomotion system 39 includes fixed
+wings that provide lift similarly to an airplane (e.g., tail
+Mar. 30, 2017
+sitter UAV). In another example, the locomotion system 39
+includes a propeller in a pusher configuration (e.g., fixed
+wing aircraft). Other types of locomotion systems 39 can be
+used with the UAV 12 as appreciated by one of skill in the
+art. In fact, the vehicle need not be aerial. Walking or other
+ground vehicles could also be used.
+0053. The UAV 12 includes a speed sensor 21 used in
+navigating the UAV 12. In particular, the speed, altitude and
+direction sensor 21 continuously measures the speed, orien
+tation and direction of the UAV 12. These measurements can
+be fed into the UAV controller 31. The UAV controller 31
+can instruct the locomotion system 39 to increase or
+decrease thrust to achieve a desired speed for the UAV 12
+compared to the measured speed. The speed sensor 21 can
+use hall-effect sensors, voltage or current feedback of
+motors, or other speed measurement systems.
+0054) The UAV 12 includes a proximity sensor 27 for
+detecting a presence of objects in the search and rescue area
+14. The UAV controller 31 uses this information to navigate
+the UAV 12 through the search and rescue area 14 by avoiding obstacles such as trees, boulders, etc. The UAV
+controller 31 directs the UAV data link transceiver 25 to
+wirelessly communicate information from the proximity
+sensor 27 (e.g., detected presence of objects) to the mobile
+command center 16.
+0055. The UAV 12 can include a unidirectional micro
+phone 23A and an omni-directional microphone 23B for
+capturing audio data in the search and rescue area 14. The
+unidirectional microphone 23A (e.g., cardioid microphone
+or hypercardioid microphone) captures audio predominantly
+from one direction. The omni-directional microphone 23B
+captures audio evenly from all directions. In another
+example, the UAV 12 includes a bidirectional microphone
+which captures audio from two opposite directions. The
+UAV controller 31 directs the UAV data link transceiver 25
+to wirelessly communicate this audio data to the mobile
+command center 16.
+0056. The UAV 12A, 12B can also include a visible light
+camera 22 for capturing video of the search and rescue area
+14. The visual light camera 22 forms an image (i.e., gener
+ates digital stills and video) by using visible light. The visual
+light camera 22 typically operates in a 450 to 750 nanometer
+range. For example, the visual light camera 22 is a charge
+coupled device (CCD) or complementary metal-oxide-semi
+conductor (CMOS) camera. The visual light camera 22 has
+a variety of applications such as enabling the UAV 12 to
+avoid obstacles, localization techniques, improved accuracy
+of navigation, and video feedback. The visual light camera
+22 has a video analytics system 29. The video analytics
+system 29 can be used for image recognition and processing.
+This video analytics system 29 can be used to confirm the
+detection of survivors 40 by recognizing the survivors 40.
+The UAV 12 communicates video from the visible light camera 22 to the mobile command center 16 via the UAV
+data link transceiver 25.
+0057 The UAV 12 includes an infrared (IR) camera 28
+for Supplementing detection of Survivors 40 and navigation
+through search and rescue area 14. The IR camera 28 forms
+an image using infrared radiation. The IR camera 28 typi cally operates to detect light having wavelengths from 1 to
+several micrometers, to as long as 14,000 nanometers, or
+longer. In one example, the IR camera 28 is a thermal
+imaging camera used to detect heat signatures of Survivors
+40 and hotspots of fires. In another example, the IR camera
+US 2017/0O88261 A1
+28 provides night vision capabilities which help in navigat
+ing the UAV 12. The IR camera includes either a cooled
+infrared detector or uncooled infrared detector.
+0058. The UAV 12 includes a gas sensor 38 for detecting
+a presence of different kinds of gases. For example, the gas
+sensor 38 can be used to supplement detection of survivors
+40.
+0059. In particular, the gas sensor 38 can detect carbon
+dioxide levels which can be used to confirm detection of
+survivors 40. The UAV data link transceiver 25 wirelessly communicates the detected presence of different gases to the
+mobile command center 16.
+0060. The UAV 12 includes a medical supply compart
+ment 36 for holding emergency medical Supplies. The
+medical Supply compartment 36 is configured to release
+medical supplies to survivors 40 based on the detected
+presence of the Survivor. For example, the medical Supply
+compartment 36 can provide water, antibiotics, and/or drugs
+to survivors 40 as instructed by the mobile command center
+16. For example, a user can input this instruction at the
+mobile command center 16 based on data received from the
+UAVS 12.
+0061. The UAV 12 can also include a GPS receiver 33.
+This GPS receiver 33 functions the same as the GPS receiver
+33 described above for the mobile command center 16. In
+this example, the GPS receiver 33 calculates the UAV
+location (e.g., GPS coordinates) by receiving GPS informa
+tion from GPS satellites. The GPS receiver 33 supplements
+the UAV LPS module in determining the UAV location.
+0062 FIG. 4 illustrates types of information exchanged
+between the mobile command center 16 and the first UAV
+12A, the first UAV 12A and the second UAV 12B, as well
+as the mobile command center 16 and a first responder 82
+during operation of the system 10. FIG. 5 illustrates a flow
+chart of the main steps included in the operation of the
+system 10.
+0063 Prior to step 100, UAVs 12 having the UWB
+transceiver sensors 26, as described above, are deployed. In
+step 100, the mobile command center 16 pre-loads a refer
+ence location 60 (e.g., location of destroyed building) into
+the first UAV 12A to be used in determining survivor
+location 68. For example, as illustrated in FIG. 3, the mobile
+command center 16 sends the reference location 60 to the
+first UAV 12A. The UAV LPS module 35 (FIGS. 1A, 1B) of
+the first UAV 12A can use this reference location 60 as a
+datum to calculate the first UAV location 70A as geo-spatial
+coordinates for the first UAV 12A. Further, as described
+above, the first UAV 12A can accurately determine the
+survivor location 68 based on this calculated first UAV
+location and the measured distance between the first UAV
+12A and the survivor 40 (FIG. 1A).
+0064. In step 102, the mobile command center 16 coor
+dinates travel paths for each UAV 12A, 12B and uploads the
+coordinated travel paths to respective UAV 12A, 12B. For
+example, as illustrated in FIG. 3, the first UAV travel path 64
+is uploaded to the first UAV 12A. The travel paths are
+coordinated so that the second UAV 12B does not overlap and replicate areas searched by the first UAV 12A. This
+coordination also optimizes the search operation.
+0065 During the search and rescue operation, the UAV
+12 can continuously send status information to the mobile
+command center 16. For example, the first UAV 12A sends
+a first UAV status 74 that can include various UAV perfor mance and device information. If the first UAV 12A is
+Mar. 30, 2017
+damaged (i.e., broken down) or trapped, the first UAV 12A
+can request deployment of a substitute second UAV 12B
+(step 104). This substitute deployment request may be sent
+within the first UAV status 74 message. Alternatively, this
+deployment request may be sent as a separate message from
+the UAV status 74.
+0066. In step 106, the first UAV 12A detects a presence
+of a survivor and determines the survivor location 68. As
+described above, the survivor location 68 is based on the
+calculated first UAV location 70A and the measured distance
+between the first UAV 12A and the survivor 40. As shown
+in FIG. 3, the first UAV 12A can wirelessly transmit the
+determined survivor location 68 to the mobile command
+center 16.
+0067. In step 108, wireless communication is provided
+between the first UAV 12A and Second UAV 12B for
+confirming and refining detection. In particular, these wire
+less intercommunications between UAVs 12 refine the accu
+racy of detection by confirming or refining whether Survi
+vors 40 were correctly detected. As illustrated in FIG. 3, the
+first UAV 12A communicates the first UAV location 70A and
+survivor location 68 information to the second UAV 12B via
+the inter-UAV data link 44. The second UAV 12B commu
+nicates the second UAV location 70B to the first UAV 12A.
+For example, based on this information the second UAV 12B can locate the first UAV 12A and/or the survivor location
+and determine whether detection of the survivor 40 is
+correct. The second UAV 12B sends a confirm/refine survi
+vor detection message 72 to the first UAV 12A based on the
+second UAVs determination of Survivor detection.
+0068. In step 110, the first UAV 12A measures survivor
+Vital signs telemetry data 62 (e.g., heart rate and respiration
+rate) for the detected survivor 40. As shown in FIGS. 2-3, the
+first UAV 12A wirelessly communicates the survivor vital
+signs telemetry data 62 and survivor location 68 to the
+mobile command center 16 (step 112). The mobile command
+center 16 uses the survivor vital signs telemetry data 62 to
+indicate the overall health condition of the identified survi
+vor 40. In step 114, the mobile command center 16 instructs
+UAV(s) 12 to provide emergency medical supplies to the
+detected survivor 40 based on the survivor vital signs telemetry data 62. In particular, the mobile command center
+16 sends a release medical supplies command 76 to the first
+UAV 12A instructing the first UAV 12A to release relevant
+medical supplies for the survivor 40. The medical supplies provide a temporary medical solution for the survivor 40
+until first responders 82 can reach the survivor 40.
+0069. In step 116, the mobile command center 16 deter
+mines an ingress/egress path (i.e., safe path info 84) to the
+survivor 40 and identifies hazardous conditions in the deter
+mined path (i.e., hazards in path 88). Specifically, the mobile
+command center 16 can use information received from the
+UAVs 12 to locate and identify hazardous conditions in the
+determined path to the survivor. The mobile command
+center 16 can assess the path to the survivor 40 and provide
+an alternate path if the originally determined path is not
+usable.
+0070 The mobile command center 16 forewarns first
+responders 82 of the search and rescue area landscape and
+Survivor health conditions via a display of the configurator
+computer workstation 18. For example, as illustrated in FIG.
+3, the first responder 82 can view survival vital signs telemetry data 62, a 3d location map 86, safe path info 84.
+and hazards in path 88. The first responder 82 can use this
+US 2017/0O88261 A1
+information in making informed decisions, assessing the
+response priority within the search and rescue area 14, and
+providing timely medical attention to the affected survivor
+40.
+(0071. The UAVs 12 provide other information to the
+mobile command center 16 that aid first responders 82 in
+making informed rescue response decisions. As illustrated in
+FIG. 3, visible image data 66, audio data 67, IR image data
+78, and UWB data 80 are sent from the first UAV 12A to the
+mobile command center 16. This information can be viewed
+by first responders 82 at the mobile command center 16.
+Such information allows first responders 82 to appropriately prioritize rescue response and other search and rescue deci
+sions.
+0072 While this invention has been particularly shown
+and described with references to preferred embodiments
+thereof, it will be understood by those skilled in the art that
+various changes in form and details may be made therein
+without departing from the scope of the invention encom
+passed by the appended claims.
+What is claimed is:
+1. An unmanned aerial vehicle (UAV), comprising:
+an ultra-wide band (UWB) transceiver sensor for detect
+ing the presence of a Survivor in a search and rescue
+area; and
+a UAV data link transceiver for wirelessly communicating
+information concerning the Survivor to a command
+Center.
+2. The UAV of claim 1, wherein the information concern
+ing the Survivor includes Survivor vital signs telemetry data.
+3. The UAV of claim 2, wherein the survivor vital signs telemetry data comprises the heart and/or respiration rate of
+the survivor.
+4. The UAV of claim 1, further comprising an inter-UAV
+data link transceiver for wirelessly communicating informa
+tion concerning the survivor to another UAV.
+5. The UAV of claim 1, further comprising a medical
+Supply compartment for holding emergency medical Sup
+plies, wherein the medical Supply compartment is config
+ured to release medical supplies to the survivor based on the
+detected presence of the survivor.
+6. The UAV of claim 1, further comprising a UAV local
+positioning system module for receiving local positioning signals from multiple local positioning system portable
+antennas Surrounding the search and rescue area for deter
+mining the position of the UAV in the search and rescue aca.
+7. The UAV of claim 1, wherein the UAV data link
+transceiver is configured to wirelessly communicate the
+information concerning the Survivor via a UAV-command
+data link to the command center.
+8. The UAV of claim 1, further comprising a proximity
+sensor for detecting the presence of objects in the search and
+rescue area, wherein the UAV data link transceiver wire
+lessly communicates the detected presence of objects to the
+command center.
+9. The UAV of claim 1, further comprising a gas sensor
+for detecting the presence of different kinds of gases,
+Mar. 30, 2017
+wherein the UAV data link transceiver wirelessly commu
+nicates the detected presence of different gases to the com
+mand center.
+10. The UAV of claim 1, further comprising a visible light
+camera for detecting video and communicating the video to
+the command center.
+11. A search and rescue system, comprising:
+a command center; and
+an unmanned aerial vehicle (UAV) having at least one
+sensor for detecting the presence of a Survivor in a
+search and rescue area, and a UAV data link transceiver
+for wirelessly communicating information concerning
+the Survivor to the command center.
+12. The system of claim 11, wherein the sensor is an
+ultra-wide band (UWB) transceiver sensor.
+13. The system of claim 11, wherein the command center
+comprises a local positioning system command center mod
+ule for receiving and/or local positioning signals from
+multiple local positioning system portable antennas Sur
+rounding the search and rescue area for determining the
+position of the UAV in the search and rescue area.
+14. The system of claim 11, wherein the command center
+comprises a 3-dimensional mapping system for creating a
+3-dimensional contour map of the search and rescue area.
+15. The system of claim 11, wherein the command center
+comprises a wide-area modem for communicating over a
+cellular network.
+16. The system of claim 11, wherein the UAV further
+comprises an inter-UAV data link transceiver for wirelessly communicating the information concerning the Survivor to
+another UAV.
+17. The system of claim 11, wherein UAV data link
+transceiver is configured to wirelessly communicate the
+information concerning the Survivor via a UAV-command
+data link to the command center.
+18. A search and rescue method, comprising: deploying an unmanned aerial vehicle (UAV) having an
+ultra-wide band (UWB) transceiver sensor in a search
+and rescue area;
+the UWB transceiver sensor detecting the presence of a
+Survivor in the search and rescue area; and
+the UAV wirelessly communicating information concern
+ing the Survivor to a command center.
+19. The method of claim 18, further comprising:
+the command center loading a reference location into a
+UAV location positioning system module of the UAV:
+and
+the UAV using the UAV location positioning system
+module for determining the survivor's location based
+on a preloaded reference location.
+20. The method of claim 18, further comprising deter
+mining an ingress/egress path to the Survivor.
+21. The method of claim 20, further comprising the
+command center identifying a hazardous condition in the
+determined ingress/egress path.
+22. The method of claim 18, further comprising the UAV
+requesting deployment of a substitute UAV if the UAV is
+damaged or trapped. 
